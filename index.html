@@ -35,7 +35,15 @@
         <!-- Example with automatic micro-deposit initiation -->
         <dwolla-funding-source-create customerId="98765432134" initiateMicroDeposits>
         </dwolla-funding-source-create>
+        <button onclick="myFunction()">Send Event</button>
     </div>
+    <script>
+        function myFunction() {
+            if (window?.ReactNativeWebView) {
+                window.ReactNativeWebView.postMessage(JSON.stringify({event:'success-dwolla',data:{'hello':'world'}}));
+            }
+        }
+    </script>
 </body>
 
 </html>
