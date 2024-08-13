@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        .container-wrap {
+            width: 600px;
+            padding: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            background: #f2f2f2;
+        }
+    </style>
+    <script src="//cdn.dwolla.com/v2.2.0/dwolla-web.js"></script>
+    <link rel="stylesheet" href="/styles/create-funding-sources-custom.css" />
+    <script>
+        dwolla.configure({
+            environment: "sandbox",
+            styles: "/styles/create-funding-sources-custom.css",
+            success: (res) => Promise.resolve(),
+            error: (err) => Promise.resolve(),
+            tokenUrl: "/tokenUrl",
+        });
+    </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-wrap">
+        <!-- Example with automatic micro-deposit initiation -->
+        <dwolla-funding-source-create customerId="98765432134" initiateMicroDeposits>
+        </dwolla-funding-source-create>
+    </div>
+</body>
+
+</html>
