@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0, user-scalable=0">
     <style>
         .container-wrap {
             width: 600px;
@@ -40,7 +39,7 @@
     <script>
         function myFunction() {
             if (window?.ReactNativeWebView) {
-                window.ReactNativeWebView.postMessage(JSON.stringify({event:'success-dwolla',data:{'hello':'world'}}));
+                window.ReactNativeWebView.postMessage(JSON.stringify({ event: 'success-dwolla', data: { 'hello': 'world' } }));
             }
         }
     </script>
